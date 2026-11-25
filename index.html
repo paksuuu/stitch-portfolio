@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Paolo Roxas - Full Stack Web Developer</title>
+    <!-- Font Awesome CDN for Brand & UI Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- Tailwind CSS v3 with Forms & Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pageBg: '#E4D1B2',
+              navBg: '#2C3449',
+              textTitle: '#2C3545',
+              textMuted: '#586174',
+              cardText: '#424C5F',
+              divider: '#D6C1A0',
+            },
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- BEGIN: Custom Styles -->
+    <style data-purpose="base-styling">
+      body {
+        background-color: #E4D1B2;
+        color: #2C3545;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+    <style data-purpose="scrollbar-and-interactions">
+      /* Subtle custom scrollbar matching theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #DDC8A8;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #BFA785;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #9D8462;
+      }
+    </style>
+    <!-- END: Custom Styles -->
+  </head>
+  <body class="min-h-screen relative flex flex-col justify-between selection:bg-[#2C3449] selection:text-white" id="home">
+    <!-- BEGIN: Navigation -->
+    <header class="w-full pt-6 pb-2 flex justify-center sticky top-2 z-40 px-4">
+      <nav class="bg-[#2C3449] text-gray-200 px-6 py-2 rounded-full shadow-lg flex items-center space-x-6 text-sm sm:text-base font-normal transition-all duration-300" data-purpose="main-navigation">
+        <a class="hover:text-white transition-colors duration-200" href="#home">Home</a>
+        <a class="hover:text-white transition-colors duration-200" href="#projects">Projects</a>
+        <a class="hover:text-white transition-colors duration-200" href="#tools">Tools</a>
+        <a class="hover:text-white transition-colors duration-200" href="#contact">Contact</a>
+      </nav>
+    </header>
+    <!-- END: Navigation -->
+    <!-- BEGIN: MainContent -->
+    <main class="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 mt-6">
+      <!-- BEGIN: HeroSection -->
+      <section class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 pb-10 pt-4" data-purpose="hero">
+        <!-- Profile circular photo -->
+        <div class="flex-shrink-0">
+          <div class="w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden border-[6px] border-white/60 shadow-md bg-stone-300">
+            <img alt="Paolo Roxas graduation portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpaL3UqnZbCdU3vO5dcU3M7Sxhd1H_bOs4IK0gmm18V6D9yRkVcICsIxtRTbkahCXIpJ54gv57RbBoR3PUb6rbw7odCOPw3GFYP98G3BtzFici1NgeehdrnD1wEhtwpW7e38tyX2QVWyzlP3rQx4Hso4P6LdXJOXrl_znq3mHsETUCDjNfhZKv7X801RRSi2i0CKhgyUZ0Tqt3hhetDR4TQjqm4ozTYKSpgZB0Zsbw" />
+          </div>
+        </div>
+        <!-- Hero Information -->
+        <div class="flex flex-col text-center md:text-left justify-center flex-1">
+          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-[#2B3548]"> Paolo Roxas </h1>
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#66533A] mt-1 mb-3"> Full Stack Web Developer </h2>
+          <p class="text-xs sm:text-sm leading-relaxed text-[#4A433A] max-w-xl font-normal"> I'm a game developer who is well versed in C# and C++, primarily works with Unity Engine, along with experience in Unreal Engine 4. Beyond programming, I'm also interested in level design, gameplay design, and music composition. </p>
+        </div>
+      </section>
+      <!-- END: HeroSection -->
+      <!-- Section Divider -->
+      <hr class="border-[#D0BD9F] my-6" />
+      <!-- BEGIN: ProjectsSection -->
+      <section class="py-6" data-purpose="projects" id="projects">
+        <h2 class="text-3xl font-bold text-center text-[#2B3548] mb-12"> Projects </h2>
+        <div class="flex flex-col space-y-12 sm:space-y-14">
+          <!-- Project 1: E-commerce API Documentation (Text Left, Image Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1 text-center md:text-right flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> E-commerce API Documentation </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> Dynamic E-Commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documented Backend API published publicly using Postman. </p>
+            </div>
+            <div class="order-1 md:order-2 overflow-hidden rounded-md shadow-sm">
+              <img alt="Coastal sea birds over ocean" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3ark57weeC28MT0f-rQpYAr_rFAZmkM_SHK_v30rKomm1zt5iLOUeF7v58N35QOfuXag9DythvcBwGfU2PtLvDsgQzXzgmmi1rpT55Z0QGz6HOe9drXeNnKBKAHRukcXz926ufKqdeftKpHop5Q1hrHx7dJ9nrkynXThOsz8yRyoCW-k3lLspcgqLuCXr5ilgJK1DY4tyXnagwmizP9dlrONQHbxVN_GIupVvrufP" />
+            </div>
+          </article>
+          <!-- Project 2: Course Booking API Documentation (Image Left, Text Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-1 overflow-hidden rounded-md shadow-sm">
+              <img alt="Suspension bridge architectural cables" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDerb3-tI1Zu5oSGNuLwoBf6e41Z5F1nFw6dhzwr6MTpGdt9ODgTumMUDFyzX9Ed5iHfMBnWZKqxJ9yRtbkxNZ8hc8FDWvCM1YitckV9aLWpsy2H9HbD4rDdJM37vDyEs2KAxhS1GVBLwt8FuyM5carcMR87dcaKczsW27vCRGxxwI6t6Zi-PfVR7HqK5f3i3dedmOSRfVFSIP3DzbwKtF0tDXDxyBBAGD1_22Of9z_" />
+            </div>
+            <div class="order-2 text-center md:text-left flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> Course Booking API Documentation </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman. </p>
+            </div>
+          </article>
+          <!-- Project 3: Course booking App (Text Left, Image Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1 text-center md:text-right flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> Course booking App </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> A MERN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly. </p>
+            </div>
+            <div class="order-1 md:order-2 overflow-hidden rounded-md shadow-sm">
+              <img alt="Mountain highway curve at sunset" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg_Pg4y3haiiO8bhW8ZqkBXiH1X1jePKdDygfiVfdZYA25EwdfkucZrGJWvAi2p4KAhBmPmi4B7R2cxHApC20cgictP2qJQlfNhR0CdDnTV3RSn9hX938bihcNxIDuNZO5Q5ju1nozI0DPxNPoRMmaB4Inl6YBDQms_r5z2nzk3gUashW0qCLpwwMJKDnvN4ltwoiUmouA-vKW_oKcjbA8HkLDl1hL0nXHMvSom7fl" />
+            </div>
+          </article>
+          <!-- Project 4: E-commerce App (Image Left, Text Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-1 overflow-hidden rounded-md shadow-sm">
+              <img alt="Laptop and smartphone with user hands" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvjnkaYuss6hpr8KYJeol-wCgbmTE9-4VydCh_dJr4bBzFsNmBfYEFtQ9NMweLJ46j8q0fpgqd_JdMSQWCkfqcl9_snJSnMDnOd6HS38ddh16vDud8bkRHfPPR9QNqyi3AppHwbPtiEca4bIm8XPNqpRAEWTWcB-eQIUXFJxdUJRom3ZGFtV32i9ba8ykSEuGvjLn-I6Bsi1pKkKz_jPHsp3pUZKsw8Dz5sx2hkjtK" />
+            </div>
+            <div class="order-2 text-center md:text-left flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> E-commerce App </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> MERN E-Commerce Platform. The platform features dynamic product catalog with filtering and sorting, real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities. </p>
+            </div>
+          </article>
+          <!-- Project 5: Airline Booking System Mockup (Text Left, Image Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1 text-center md:text-right flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> Airline Booking System Mockup </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> Side Project: Conceptual design showcasing an intuitive UI for flight search, seat selection, and booking confirmation, focusing on user experience and workflow efficiency. </p>
+            </div>
+            <div class="order-1 md:order-2 overflow-hidden rounded-md shadow-sm">
+              <img alt="Strawberry yogurt bowl breakfast" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIzTKt9enEaGxx5a6uDDkyQlVDhx0-Rr0ZRbGbJs5dQILVdJRTkz0oavM13oHrnwkHf8mnEXeT6lfC9Eh-FjSyVeXt_ygygWLGCnvJSGTMgh7ZovKUiGIDHkmdDrtFFEKrvk01ClhijbNahqqXtbc6ABq_EOQLxbH6GMYzlHeKI0M--kuuSwpc__e5VejYc7rmbct76D0YuE1xXo2wo0BahRvVwbOBrNf-K_mApYV7" />
+            </div>
+          </article>
+          <!-- Project 6: Airline Booking System Prototype (Image Left, Text Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-1 overflow-hidden rounded-md shadow-sm">
+              <img alt="Sunset mountain coastal highway" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClOIkg3Mq0AafEJ5zqfN4luEYq3PrlwKUhPQRBMFui4NeqfoEArbTlP7DcIWhS16b6eOHyAzlOA68A0gmhoiTz50o2lWCJyFY_beUCdyexXzvlXE6e8-7n5xwLNWn7gGYzUmjaDGbKkfZOQ5Vi-1y7DuAvffwtAX5cU7uuy64RPD-b5W3VVv0uGCKTt67ICeT5PFeQxYzDHSa2PiT_ZdZ_nMvgZrfkNaIgqxUG8L-k" />
+            </div>
+            <div class="order-2 text-center md:text-left flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> Airline Booking System Prototype </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> Side Project: Interactive prototype simulating end-to-end airline booking functionalities, including flight search, reservation, payment processing, and real-time ticket management. </p>
+            </div>
+          </article>
+          <!-- Project 7: Short Courses Capstone (Text Left, Image Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1 text-center md:text-right flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> Short Courses Capstone </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> Placeholder for your Short courses capstone project. </p>
+            </div>
+            <div class="order-1 md:order-2 overflow-hidden rounded-md shadow-sm">
+              <img alt="Vintage industrial equipment inside workshop" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMRAbHPm6OafNuUINMGlOc96YlIJKAXE8Wh2pmPia4snQY9885y1mtVuqnQTcsg3_iSSu51NqV_Uz0mq_18VVBGC6sl8USlGT5lqhLZoFVQJtbFKY-5mkY15uhLQgsS7rbx7dELJAJTKO33wA1E34cbfZFcDIysmoRrJyzYIBcjqwdiTdKlenR0i39OwhVHjF6Igx9QA6RL-NMQIpxQORHoHxHT-athIGD0WMhaJMQ" />
+            </div>
+          </article>
+          <!-- Project 8: Short Courses Capstone (Image Left, Text Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-1 overflow-hidden rounded-md shadow-sm">
+              <img alt="Water ripple reflection pattern" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCENQGkQYzXJ-sG76U4ljGADTxNoZVSvfNlAsLe-o_m45M2W9dPhuE4G9PDInHuDYTp9yT2L6k2R7qxMkJEbki8ZYbGo8KpG1Hm2_U7yQo--56urs-YitwM4DmJ749bKFxOSkOXyOsueRNHZy7vQyBAcc7h975lg3reK6uzG_c_knE1gGnmJY732HaG3eYpAanm0ogfi8_pfdkHC2KO35mqS5tmIvRZdcQDuCd09icj" />
+            </div>
+            <div class="order-2 text-center md:text-left flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> Short Courses Capstone </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> Placeholder for your Short courses capstone project. </p>
+            </div>
+          </article>
+          <!-- Project 9: Short Courses Capstone (Text Left, Image Right) -->
+          <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1 text-center md:text-right flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold text-[#2B3548] mb-2"> Short Courses Capstone </h3>
+              <p class="text-xs sm:text-sm text-[#4A433A] leading-relaxed"> Placeholder for your Short courses capstone project. </p>
+            </div>
+            <div class="order-1 md:order-2 overflow-hidden rounded-md shadow-sm">
+              <img alt="Mountain peak with scenic clouds in blue sky" class="w-full h-48 sm:h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4rLsOBqGMxRbn32-ljBth3ark_3AhmyZGhNEiUhvFd0mBwkbIb5z1kv66JKFjJQm5UCy76qN0dq6GB9SOj5GmTSHK6gcTX3e4WF1ng8bhpVuZB-ypcuWoci5qbqdNlT37NqR6TFG-rM7P_lbx_8plC9911zwpdp3wnVmu6LzGcMyNQbgLXtwNyYlkosCeKYfQabvbQvpjL253BmcIc89inh3HZdufCTWTvPBV0xif" />
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- END: ProjectsSection -->
+      <!-- Section Divider -->
+      <hr class="border-[#D0BD9F] my-10" />
+      <!-- BEGIN: ToolsSection -->
+      <section class="py-6" data-purpose="tools" id="tools">
+        <h2 class="text-3xl font-bold text-center text-[#2B3548] mb-12"> Tools </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
+          <!-- Column 1: Front End -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-lg font-bold text-[#2B3548] mb-6">Front End</h3>
+            <div class="grid grid-cols-2 gap-6 w-36">
+              <!-- HTML5 -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-brands fa-html5 text-5xl text-[#E34F26]"></i>
+              </div>
+              <!-- CSS3 -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-brands fa-css3-alt text-5xl text-[#1572B6]"></i>
+              </div>
+              <!-- Bootstrap -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-brands fa-bootstrap text-5xl text-[#7952B3]"></i>
+              </div>
+              <!-- JavaScript -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-brands fa-square-js text-5xl text-[#F7DF1E]"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Column 2: MERN -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-lg font-bold text-[#2B3548] mb-6">MERN</h3>
+            <div class="grid grid-cols-2 gap-6 w-36 items-center">
+              <!-- MongoDB -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-solid fa-leaf text-5xl text-[#47A248]"></i>
+                <span class="text-[9px] font-bold text-gray-700 -mt-1 tracking-tighter">mongoDB</span>
+              </div>
+              <!-- Express.js -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <span class="text-4xl font-extrabold tracking-tight text-[#1F2937]">ex</span>
+              </div>
+              <!-- React -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-brands fa-react text-5xl text-[#61DAFB]"></i>
+              </div>
+              <!-- Node.js -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-brands fa-node-js text-5xl text-[#68A063]"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Column 3: Other Tools -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-lg font-bold text-[#2B3548] mb-6">Other Tools</h3>
+            <div class="grid grid-cols-2 gap-6 w-36 items-center">
+              <!-- VS Code -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-solid fa-code text-5xl text-[#007ACC]"></i>
+              </div>
+              <!-- Unity -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-brands fa-unity text-5xl text-[#111827]"></i>
+              </div>
+              <!-- Git -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <i class="fa-brands fa-git-alt text-5xl text-[#F05032]"></i>
+              </div>
+              <!-- Sublime Text / Text Editor Icon -->
+              <div class="flex flex-col items-center justify-center p-2">
+                <div class="w-12 h-12 bg-gradient-to-tr from-[#3b3a36] to-[#403d39] rounded-lg shadow-sm flex items-center justify-center border border-gray-400">
+                  <span class="text-2xl font-black text-[#FF9800]">S</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: ToolsSection -->
+      <!-- Section Divider -->
+      <hr class="border-[#D0BD9F] my-10" />
+      <!-- BEGIN: ContactSection -->
+      <section class="py-6" data-purpose="contact" id="contact">
+        <h2 class="text-3xl font-bold text-center text-[#2B3548] mb-10"> Contact </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <!-- Interactive Map Mockup (Makati / Guadalupe / Bel-Air representation) -->
+          <div class="relative w-full h-[320px] rounded-sm overflow-hidden shadow-sm border border-[#D5C2A2]">
+            <!-- Map Background Imagery -->
+            <iframe class="w-full h-full border-0 filter contrast-[0.95]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15447.88647007802!2d121.03264635!3d14.560731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c845b4c1064d%3A0xe54db2c21915667c!2sGuadalupe%20Nuevo%2C%20Makati%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph" title="Makati Guadalupe Map Location"></iframe>
+            <!-- "Open in Maps" Tag Overlay matching wireframe -->
+            <a class="absolute top-2 left-2 bg-white/90 hover:bg-white text-gray-800 text-[11px] font-medium px-2 py-1 rounded shadow flex items-center space-x-1" href="https://maps.google.com/?q=Guadalupe+Nuevo+Makati" rel="noopener noreferrer" target="_blank">
+              <span>Open in Maps</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+          </div>
+          <!-- Contact Form -->
+          <form action="#" class="flex flex-col space-y-4" data-purpose="contact-form" method="POST">
+            <!-- Name Input -->
+            <div>
+              <label class="block text-xs font-semibold text-[#3D352B] mb-1" for="name">Name</label>
+              <input class="w-full rounded-md bg-white border border-[#C5B496] px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-1 focus:ring-[#2C3449] shadow-inner" id="name" name="name" placeholder="" required="" type="text" />
+            </div>
+            <!-- Email Input -->
+            <div>
+              <label class="block text-xs font-semibold text-[#3D352B] mb-1" for="email">Email address</label>
+              <input class="w-full rounded-md bg-white border border-[#C5B496] px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-1 focus:ring-[#2C3449] shadow-inner" id="email" name="email" placeholder="" required="" type="email" />
+            </div>
+            <!-- Message Textarea -->
+            <div>
+              <label class="block text-xs font-semibold text-[#3D352B] mb-1" for="message">Message</label>
+              <textarea class="w-full rounded-md bg-white border border-[#C5B496] px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-1 focus:ring-[#2C3449] shadow-inner resize-y" id="message" name="message" placeholder="" required="" rows="4"></textarea>
+            </div>
+            <!-- Form Footer: Social Icons & Submit Button -->
+            <div class="flex items-center justify-between pt-1">
+              <!-- Social Icons (Facebook, Instagram, LinkedIn, GitHub) -->
+              <div class="flex items-center space-x-3 text-lg">
+                <a class="text-[#1877F2] hover:opacity-80 transition-opacity" href="https://www.facebook.com" rel="noopener noreferrer" target="_blank" title="Facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a class="text-[#E4405F] hover:opacity-80 transition-opacity" href="https://www.instagram.com" rel="noopener noreferrer" target="_blank" title="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a class="text-[#0A66C2] hover:opacity-80 transition-opacity" href="https://www.linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a class="text-[#24292E] hover:opacity-80 transition-opacity" href="https://www.github.com" rel="noopener noreferrer" target="_blank" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <!-- Send Button -->
+              <button class="px-5 py-1.5 bg-[#DDC6A4] hover:bg-[#D3BA96] text-gray-800 border border-[#BFA785] rounded text-xs font-medium shadow-sm transition-colors" type="submit"> Send </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- END: ContactSection -->
+    </main>
+    <!-- END: MainContent -->
+    <!-- BEGIN: Footer -->
+    <footer class="py-8 text-center text-xs text-[#5D554A] mt-10" data-purpose="site-footer">
+      <p>© 2026 Paolo Roxas</p>
+    </footer>
+    <!-- END: Footer -->
+    <!-- BEGIN: ScrollToTop -->
+    <!-- Floating scroll-to-top circular button with upward arrow -->
+    <a aria-label="Back to Top" class="fixed bottom-5 right-5 w-10 h-10 bg-[#2C3449] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#1E2538] transition-all transform hover:scale-105 z-50 text-sm" href="#home" id="back-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <!-- END: ScrollToTop -->
+    <!-- BEGIN: InteractiveScripts -->
+    <script data-purpose="scroll-smoothness">
+      // Optional script to handle graceful scroll behavior and prevent default form submission
+      document.querySelector('form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! This is a demo form.');
+      });
+    </script>
+    <!-- END: InteractiveScripts -->
+  </body>
+</html>
